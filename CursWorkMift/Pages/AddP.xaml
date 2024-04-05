@@ -1,0 +1,49 @@
+﻿<Page x:Class="CursWorkMift.Pages.AddP"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CursWorkMift.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddP" Background="White">
+
+    <Grid>
+        <Grid Width="250" Height="350">
+            <TextBlock Text="Date publicing" Margin="20,20,160,0" VerticalAlignment="Top"/>
+            <DatePicker Name="DateDP" SelectedDate="{Binding datePublic}"  Margin="100,20,20,20" VerticalAlignment="Top"/>
+            
+            <TextBlock Text="Title" VerticalAlignment="Top" Margin="20,50,160,0"/>
+            <TextBox Name="TitleTB" Text="{Binding title}" VerticalAlignment="Top" Margin="100,50,20,20"/>
+
+            <TextBlock Text="CountPages" VerticalAlignment="Top" Margin="20,80,160,0"/>
+            <TextBox Name="PagesTB" VerticalAlignment="Top" Text="{Binding countPages}" Margin="100,80,20,20"/>
+
+            <TextBlock Text="Price" VerticalAlignment="Top"  Margin="20,110,160,0"/>
+            <TextBox Name="PriceTB" VerticalAlignment="Top" Text="{Binding price}"  Margin="100,110,20,0"/>
+
+            <TextBlock Text="Author" VerticalAlignment="Top" Margin="20,140,160,0"  />
+            <ComboBox Name="AuthorCB"  ItemsSource="{Binding Authors}" VerticalAlignment="Top" Margin="100,140,20,0" >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                <Run Text="{Binding firstName}"/>
+                <Run Text=""/>
+                <Run Text="{Binding secondName}"/>
+                        </TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBlock Text="Genre" VerticalAlignment="Top" Margin="20,170,160,0" />
+            <ComboBox Name="GenreCB"  DisplayMemberPath="name" VerticalAlignment="Top" Margin="100,170,20,0"/>
+
+            <TextBlock Text="Annotation" Margin="20,200,160,0" VerticalAlignment="Top"/>
+            <TextBox Text="{Binding Annotation}" Margin="100,200,20,0" VerticalAlignment="Top"/>
+
+
+            <Button Name="AddBT" Content="Add book" VerticalAlignment="Bottom" Margin="30,0,30,90" Click="AddBT_Click"/>
+            <Button Name="BackBT" Content="Back" VerticalAlignment="Bottom" Margin="30,0,30,60" Click="BackBT_Click" />
+        </Grid>
+    </Grid>
+</Page>

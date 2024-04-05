@@ -1,0 +1,34 @@
+﻿<Page x:Class="CursWorkMift.Pages.AllOrdersAdmP"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CursWorkMift.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AllOrdersAdmP" Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="600"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Button Name="DropBT" Content="Drop order" VerticalAlignment="Top" Margin="10,20,10,0" Click="DropBT_Click"/>
+            <Button Name="AboutBT" Content="About order" VerticalAlignment="Top" Margin="10,50,10,0" Click="AboutBT_Click"/>
+            <Button Name="StatusBT" Content="Next status" VerticalAlignment="Top" Margin="10,80,10,0" Click="StatusBT_Click"/>
+
+            <Button Name="BackBT" Content="Back" VerticalAlignment="Bottom" Margin="10,0,10,20" Click="BackBT_Click"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <DataGrid Name="OrderDG" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Users.login}" Width="150"/>
+                    <DataGridTextColumn Header="Date" Binding="{Binding orderDate}" Width="150"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status.name}" Width="150"/>
+                    <DataGridTextColumn Header="Count books" Binding="{Binding count}" Width="150"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Page>
