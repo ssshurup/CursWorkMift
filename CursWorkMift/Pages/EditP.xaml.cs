@@ -48,7 +48,7 @@ namespace CursWorkMift.Pages
             }
             catch
             {
-                MessageBox.Show("Something wrong");
+                MessageBox.Show("Ошибка");
             }
         }
 

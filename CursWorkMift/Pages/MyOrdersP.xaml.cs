@@ -34,37 +34,15 @@ namespace CursWorkMift.Pages
             {
                 App.DB.Orders.Remove(selectedOrder);
                 App.DB.SaveChanges();
-                MessageBox.Show("Succes");
+                MessageBox.Show("Успешно");
                 OrderDG.ItemsSource = App.DB.Orders.Where(a => a.idUser == App.LoggedUser.id).ToList();
             }
             else
             {
-                MessageBox.Show("Select anything");
+                MessageBox.Show("Выберите что-то");
                 return;
             }
 
-        }
-
-
-        private void AboutBT_Click(object sender, RoutedEventArgs e)
-        {
-            var selectedOrder = OrderDG.SelectedItem as Orders;
-            if(selectedOrder != null)
-            {
-                var selectedOrderBook = App.DB.OrderBook.Where(a => a.idOrder == selectedOrder.id);
-                string selectedBook = "";
-                foreach (OrderBook item in selectedOrderBook)
-                {
-                    selectedBook += "\n" + item.Books.title;
-                }
-                MessageBox.Show("Books to buy:" + selectedBook);
-            }
-            else
-            {
-                MessageBox.Show("Select anything");
-                return;
-            }
-         
         }
 
         private void BackBT_Click(object sender, RoutedEventArgs e)

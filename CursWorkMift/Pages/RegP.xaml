@@ -10,18 +10,18 @@
 
     <Grid>
         <Grid Width="250" Height="200">
-            <TextBlock Text="Register" FontSize="20" HorizontalAlignment="Center"/>
+            <TextBlock Text="Регистрация" FontSize="20" HorizontalAlignment="Center"/>
 
-            <TextBlock Text="Login" VerticalAlignment="Top" Margin="20,30,160,0"/>
+            <TextBlock Text="Логин" FontSize="14" VerticalAlignment="Top" Margin="20,30,160,0"/>
             <TextBox Name="LogTB" Text="{Binding login}" VerticalAlignment="Top" Margin="100,30,20,20"/>
-            
-            <TextBlock Text="Password" VerticalAlignment="Top" Margin="20,60,160,0"/>
+
+            <TextBlock Text="Пароль" FontSize="14"  VerticalAlignment="Top" Margin="20,60,160,0"/>
             <TextBox Name="PassTB" VerticalAlignment="Top" Text="{Binding password}" Margin="100,60,20,20"/>
-            
-          
-            
-            <Button Name="RegBT" Content="Register" VerticalAlignment="Bottom" Margin="30,0,30,60" Click="RegBT_Click"/>
-            <Button Name="BackBT" Content="Back" VerticalAlignment="Bottom" Margin="30,0,30,30" Click="BackBT_Click" />
+
+
+
+            <Button Name="RegBT"  FontSize="14" Content="Зарегистрироваться" VerticalAlignment="Bottom" Margin="30,0,30,60" Click="RegBT_Click"/>
+            <Button Name="BackBT" FontSize="14"  Content="Назад" VerticalAlignment="Bottom" Margin="30,0,30,30" Click="BackBT_Click" />
         </Grid>
     </Grid>
 </Page>

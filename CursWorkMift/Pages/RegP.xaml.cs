@@ -49,12 +49,12 @@ namespace CursWorkMift.Pages
                 try
                 {
                     contextUs.login = LogTB.Text;
-                    contextUs.password = LogTB.Text;
+                    contextUs.password = PassTB.Text;
                     App.RegistredUser = contextUs;
                 }
                 catch
                 {
-                    MessageBox.Show("Something wrong");
+                    MessageBox.Show("Ошибка");
                 }
                 finally
                 {

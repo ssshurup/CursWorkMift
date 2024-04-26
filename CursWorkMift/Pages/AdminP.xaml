@@ -15,26 +15,18 @@
             <ColumnDefinition Width="600"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
-            <TextBlock Name="UsernameTB" FontSize="18" HorizontalAlignment="Center"/>
-            <Button Name="AddBT" Content="Add book" Margin="10,50,10,0" VerticalAlignment="Top" Click="AddBT_Click"/>
-            <Button Name="EditBT" Content="Edit book" Margin="10,80,10,0" VerticalAlignment="Top" Click="EditBT_Click"/>
-            <Button Name="DropBT" Content="Delete book" Margin="10,110,10,0" VerticalAlignment="Top" Click="DropBT_Click"/>
-            <Button Name="CreateBT" Content="Create admin" Margin="10,140,10,0" VerticalAlignment="Top" Click="CreateBT_Click"/>
-            <Button Name="ListOrderBT" Content="All orders" Margin="10,170,10,0" VerticalAlignment="Top" Click="ListOrderBT_Click"/>
+            <StackPanel>
+                <TextBlock Name="UsernameTB" Margin="5" FontSize="18" HorizontalAlignment="Center"/>
+                <Button Name="AddBT" Content="Редактор книг" FontSize="14" Margin="5"  Click="AddBT_Click"/>
+                <Button Name="CreateBT" Content="Добавить администратора"  FontSize="14"  Margin="5"  Click="CreateBT_Click"/>
+                <Button Name="ListOrderBT" Content="Заказы"  FontSize="14" Margin="5"  Click="ListOrderBT_Click"/>
+            </StackPanel>
 
-            <Button Name="ExitBT" Content="Exit" Margin="10,0,10,20" VerticalAlignment="Bottom" Click="ExitBT_Click"/>
+            <Button Name="ExitBT" Content="Выход" FontSize="14" Margin="10,0,10,20" VerticalAlignment="Bottom" Click="ExitBT_Click"/>
         </Grid>
         <Grid Grid.Column="1">
-            <DataGrid Name="BookGrid" AutoGenerateColumns="False">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding title}" Header="Title" Width="150"/>
-                    <DataGridTextColumn Binding="{Binding Authors.firstName}" Header="Author" Width="125"/>
-                    <DataGridTextColumn Binding="{Binding Genre.name}" Header="Genre" Width="100"/>
-                    <DataGridTextColumn Binding="{Binding datePublic}" Header="DatePub" Width="75"/>
-                    <DataGridTextColumn Binding="{Binding price}" Header="Price" Width="75"/>
-                    <DataGridTextColumn Binding="{Binding countPages}" Header="Pages" Width="75"/>
-                </DataGrid.Columns>
-            </DataGrid>
+<Image Source="/Source/LogoPublic.png" Width="400" Height="400"/>
+
         </Grid>
     </Grid>
 </Page>

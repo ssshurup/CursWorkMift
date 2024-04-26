@@ -34,12 +34,12 @@ namespace CursWorkMift.Pages
             {
                 App.DB.Orders.Remove(selectedOrder);
                 App.DB.SaveChanges();
-                MessageBox.Show("Succes");
+                MessageBox.Show("Успешно");
                 OrderDG.ItemsSource = App.DB.Orders.Where(a => a.idUser == App.LoggedUser.id).ToList();
             }
             else
             {
-                MessageBox.Show("Select anything");
+                MessageBox.Show("Выберите что-то");
                 return;
             }
 
@@ -55,13 +55,13 @@ namespace CursWorkMift.Pages
                 string selectedBook = "";
                 foreach (OrderBook item in selectedOrderBook)
                 {
-                    selectedBook += "\n" + item.Books.title;
+                    selectedBook += "\n Название: " + item.Books.title + "\nЖанр: " + item.Books.Genre.name + "\nАвтор: " + item.Books.Authors.firstName + " " + item.Books.Authors.secondName;
                 }
-                MessageBox.Show("Books to buy:" + selectedBook);
+                MessageBox.Show(selectedBook);
             }
             else
             {
-                MessageBox.Show("Select anything");
+                MessageBox.Show("Выберите что-то");
                 return;
             }
 
@@ -85,12 +85,12 @@ namespace CursWorkMift.Pages
                         App.DB.Orders.Add(selectedOrder);
                     }
                     App.DB.SaveChanges();
-                    MessageBox.Show("succes");
+                    MessageBox.Show("Успешно");
                     OrderDG.ItemsSource = App.DB.Orders.ToList();
                 }
                 else
                 {
-                    MessageBox.Show("Order is already complete ");
+                    MessageBox.Show("Заказ уже выполнен");
                 }
             }
         }

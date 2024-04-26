@@ -40,13 +40,13 @@ namespace CursWorkMift.Pages
                 adm.name = NameTB.Text;
                 App.DB.Admin.Add(adm);
                 App.DB.SaveChanges();
-                MessageBox.Show("Succes");
+                MessageBox.Show("Успешно");
                 NavigationService.Navigate(new AdminP());
 
             }
             catch
             {
-                MessageBox.Show("Something wrong");
+                MessageBox.Show("Ошибка");
 
             }
         }

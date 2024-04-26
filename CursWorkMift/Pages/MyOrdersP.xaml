@@ -14,18 +14,17 @@
             <ColumnDefinition Width="600"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
-            <Button Name="DropBT" Content="Drop order" VerticalAlignment="Top" Margin="10,20,10,0" Click="DropBT_Click"/>
-            <Button Name="AboutBT" Content="About order" VerticalAlignment="Top" Margin="10,50,10,0" Click="AboutBT_Click"/>
+            <Button Name="DropBT" Content="Удалить заказ" FontSize="14" VerticalAlignment="Top" Margin="10,20,10,0" Click="DropBT_Click"/>
 
-            <Button Name="BackBT" Content="Back" VerticalAlignment="Bottom" Margin="10,0,10,20" Click="BackBT_Click"/>
+            <Button Name="BackBT" Content="Назад" FontSize="14"  VerticalAlignment="Bottom" Margin="10,0,10,20" Click="BackBT_Click"/>
         </Grid>
         <Grid Grid.Column="1">
             <DataGrid Name="OrderDG" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Name" Binding="{Binding Users.login}" Width="150"/>
-                    <DataGridTextColumn Header="Date" Binding="{Binding orderDate}" Width="150"/>
-                    <DataGridTextColumn Header="Status" Binding="{Binding Status.name}" Width="150"/>
-                    <DataGridTextColumn Header="Count books" Binding="{Binding count}" Width="150"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Users.login}" Width="150"/>
+                    <DataGridTextColumn Header="Дата" Binding="{Binding orderDate}" Width="150"/>
+                    <DataGridTextColumn Header="Статус" Binding="{Binding Status.name}" Width="150"/>
+                    <DataGridTextColumn Header="Число страниц" Binding="{Binding count}" Width="150"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CursWorkMift"
         mc:Ignorable="d"
-        Title="Publishing" Height="475" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Издательство" Height="475" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>

@@ -37,7 +37,7 @@ namespace CursWorkMift.Pages
             {
                 if (DateDP.SelectedDate == null)
                 {
-                    MessageBox.Show("Select date");
+                    MessageBox.Show("Выберите дату");
                     return;
                 }
                 var selectedAuthor = AuthorCB.SelectedItem as Authors;
@@ -47,18 +47,18 @@ namespace CursWorkMift.Pages
                 
                 App.DB.Books.Add(context);
                 App.DB.SaveChanges();
-                MessageBox.Show("Succes");
-                NavigationService.Navigate(new AdminP());
+                MessageBox.Show("Успешно");
+                NavigationService.Navigate(new BookEditorP());
             }
             catch {
-                MessageBox.Show("Something wrong");
+                MessageBox.Show("Ошибка");
             }
 
         }
 
         private void BackBT_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AdminP());
+            NavigationService.Navigate(new BookEditorP());
         }
     }
 }
